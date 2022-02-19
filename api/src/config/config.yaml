@@ -1,0 +1,13 @@
+app:
+  server:
+    url: ${SERVER_URL}
+    port: ${SERVER_PORT}
+
+  cors:
+    origin: ${CORS_ORIGIN}
+    methods: ${CORS_METHODS}
+    credentials: ${CORS_CREDENTIALS}
+
+  graphql:
+    debug: ${GRAPHQL_DEBUG}
+    playground: ${GRAPHQL_PLAYGROUND}

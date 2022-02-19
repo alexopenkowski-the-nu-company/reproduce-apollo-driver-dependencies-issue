@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+coverage
+
+# Generated
+generated
+
+# Testing
+design-system/storyshots
+
+# Production
+design-system/build
+.next
+
+# Miscellaneous
+*.scss.d.ts
+*.scss
+*.css

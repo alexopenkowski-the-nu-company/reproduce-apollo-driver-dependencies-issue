@@ -1,0 +1,21 @@
+# http://editorconfig.org
+root = true
+
+[*]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[{*.yml, *.yaml, *.md}]
+indent_style = space
+trim_trailing_whitespace = false
+
+[*.md]
+max_line_length = off
+
+[*.mdx]
+trim_trailing_whitespace = false
+

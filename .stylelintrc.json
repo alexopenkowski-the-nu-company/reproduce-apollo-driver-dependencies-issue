@@ -1,0 +1,80 @@
+{
+	"customSyntax": "postcss-scss",
+	"plugins": [
+		"stylelint-scss",
+		"stylelint-order"
+	],
+	"ignoreFiles": [
+		"node_modules/**"
+	],
+	"rules": {
+		"selector-class-pattern": "^[A-Za-z]+$",
+		"scss/percent-placeholder-pattern": "^(?:(?![A-Z]|-{3}|_{3}|[^_]_[^_]).)+$",
+		"max-nesting-depth": 5,
+		"selector-no-qualifying-type": [
+			true,
+			{
+				"ignore": [
+					"attribute"
+				]
+			}
+		],
+		"string-quotes": "double",
+		"color-hex-length": "long",
+		"indentation": "tab",
+		"no-missing-end-of-source-newline": null,
+		"no-empty-first-line": true,
+		"no-duplicate-selectors": true,
+		"no-extra-semicolons": true,
+		"block-no-empty": true,
+		"block-opening-brace-newline-after": "always",
+		"block-closing-brace-newline-after": [
+			"always",
+			{
+				"ignoreAtRules": [
+					"if",
+					"else"
+				]
+			}
+		],
+		"block-closing-brace-newline-before": "always",
+		"block-opening-brace-space-before": "always",
+		"declaration-empty-line-before": "never",
+		"declaration-colon-newline-after": "always-multi-line",
+		"declaration-colon-space-after": "always-single-line",
+		"declaration-colon-space-before": "never",
+		"declaration-block-semicolon-newline-after": "always",
+		"selector-list-comma-newline-after": "always",
+		"selector-list-comma-newline-before": "never-multi-line",
+		"rule-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"first-nested",
+					"after-single-line-comment"
+				]
+			}
+		],
+		"order/order": [
+			[
+				{
+					"type": "at-rule",
+					"name": "extend"
+				},
+				{
+					"type": "at-rule",
+					"name": "include"
+				},
+				"declarations",
+				{
+					"type": "at-rule",
+					"name": "include",
+					"hasBlock": true
+				}
+			],
+			{
+				"unspecified": "bottom"
+			}
+		]
+	}
+}
