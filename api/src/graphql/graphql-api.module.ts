@@ -4,6 +4,7 @@ import { AppConfigModule } from "../config/app-config.module"
 import { AppConfigService } from "../config/app-config.service"
 import { join } from "path"
 import {ApolloDriver, ApolloDriverConfig} from "@nestjs/apollo";
+import {TestResolver} from "../auth/test.resolver";
 
 @Module({
 	imports: [
@@ -19,5 +20,6 @@ import {ApolloDriver, ApolloDriverConfig} from "@nestjs/apollo";
 			}),
 		}),
 	],
+	providers: [TestResolver]
 })
 export class GraphqlApiModule {}
