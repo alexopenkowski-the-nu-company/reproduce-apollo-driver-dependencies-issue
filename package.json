@@ -2,9 +2,12 @@
 	"name": "reproduce-apollo-driver-dependencies-issue",
 	"version": "0.1.0",
 	"private": true,
-	"workspaces": [
-		"api"
-	],
+	"workspaces": {
+		"packages": [
+			"api"
+		],
+		"nohoist": ["**/@nestjs", "**/@nestjs/**"]
+	},
 	"engines": {
 		"node": ">=16"
 	},
